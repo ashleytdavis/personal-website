@@ -8,14 +8,14 @@ import WrapAround from './sections/WrapAround'
 
 import { AudioProvider } from './contexts/AudioContext'
 import { ScrollProvider } from './contexts/ScrollContext'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './sections/Navbar';
 
 const App = () => {
   return (
     <AudioProvider>
       <ScrollProvider>
-        <BrowserRouter >
+        <HashRouter >
           <div className="min-h-screen">
             <Navbar />
             <Routes>
@@ -27,7 +27,7 @@ const App = () => {
               <Route path="/wrap-around" element={<WrapAround />} />
             </Routes>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       </ScrollProvider>
     </AudioProvider>
   )
