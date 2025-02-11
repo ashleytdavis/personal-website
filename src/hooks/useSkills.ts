@@ -90,7 +90,7 @@ const useSkills = () => {
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const { currentTrack, isPlaying, setCurrentTrack, setIsPlaying, isMuted } = useAudio();
+  const { isPlaying, setCurrentTrack, setIsPlaying, isMuted } = useAudio();
 
   const currentlyPlaying = useMemo(() => {
     return allSkills[currentSkillIndex];
@@ -154,7 +154,8 @@ const useSkills = () => {
   };
 
   const handlePreviousTrack = () => {
-    const prevIndex = (currentSkillIndex - 1 + allSkills.length) % allSkills.length;
+    const prevIndex =
+      (currentSkillIndex - 1 + allSkills.length) % allSkills.length;
     setCurrentSkillIndex(prevIndex);
     setCurrentTrack(allSkills[prevIndex]);
     setIsPlaying(true);
