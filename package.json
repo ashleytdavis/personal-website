@@ -2,7 +2,7 @@
   "name": "portfolio-wrapped",
   "private": true,
   "version": "0.0.0",
-  "home": "https://ashleytdavis.github.io/ashleytdavis-site",
+  "homepage": "https://ashleytdavis.com/ashleytdavis-site",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
