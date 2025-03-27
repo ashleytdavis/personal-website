@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/ashleytdavis-site/",
+  base: "./",
   assetsInclude: [
     "**/*.svg",
     "**/*.png",
@@ -16,4 +16,7 @@ export default defineConfig({
     "**/*.gif",
     "**/*.webp",
   ],
+  build: {
+    outDir: "dist",
+  },
 });
