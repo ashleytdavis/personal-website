@@ -5,4 +5,15 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/ashleytdavis-site/",
+  assetsInclude: [
+    "**/*.svg",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.mp3",
+    "**/*.wav",
+    "**/*.m43",
+    "**/*.jpeg",
+    "**/*.gif",
+    "**/*.webp",
+  ],
 });
